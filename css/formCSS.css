@@ -8,6 +8,7 @@ body{
    padding: 0;
    line-height: 1.6;
    text-align: flex;
+   background-image: url(darkgym.png);
    background-repeat:no-repeat;
    background-position: center;
    background-attachment:fixed;
