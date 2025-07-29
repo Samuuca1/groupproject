@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIT FORM</title>
+    <script src="/scripts/formJS.js" defer></script>
+    <link rel="stylesheet" href="/css/formCSS.css">
+</head>
+<body>
+     <form>
+        <div class="flex-container">
+            <label>Full Name</label>
+            <input name="inputFName" placeholder="First and Last name" />
+            <div class="error-hint hidden"> You must insert your name. </div>
+        </div>
+        <div class="flex-container">
+            <label>Email</label>
+            <input name="inputEmail" placeholder="name@mail.com" />
+            <div class="error-hint hidden"> You must insert email. </div>
+        </div>
+        <div class="flex-container">
+            <label>Height</label>
+            <input name="inputHeight" placeholder="Height in inches" />
+            <div class="error-hint hidden"> You must insert your height. </div>
+        </div>
+        <div class="flex-container">
+            <label>Weight</label>
+            <input name="inputWeight" placeholder="Weight in lbs" />
+            <div class="error-hint hidden"> You must insert your weight. </div>
+        </div>
+        <div class="flex-container">
+            <label>Let us know:</label>
+            <textarea name="inputGoal" placeholder="Please tell me what is your ultimate goal with fitness."></textarea>
+            <div class="error-hint hidden"> I need to know what is your goal </div>
+        </div>
+        <button>Submit</button>
+</body>
+</html>

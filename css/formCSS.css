@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Monsieur+La+Doulaise&family=WindSong:wght@400;500&display=swap&family=Shadows+Into+Light&display=swap');
+
+
+
+body{
+   font-family: Arial, Helvetica, sans-serif;
+   margin: 0;
+   padding: 0;
+   line-height: 1.6;
+   text-align: flex;
+   background-repeat:no-repeat;
+   background-position: center;
+   background-attachment:fixed;
+   background-size: cover;
+}
+h1{
+    font-family: "WindSong", cursive;
+    color: rgb(240, 238, 238);
+    font-size: 45px;
+    padding: 10px;
+    margin: 0;
+    font-weight: 0px;
+    background-color: rgba(59, 58, 58, 0.425);
+    background-image: linear-gradient(360deg, rgb(0, 0, 0), rgba(255, 255, 255, 0.224));
+    text-align: center;
+}
+body p{
+    color: aliceblue;
+    text-shadow:2px 2px 30px rgb(255, 255, 255);
+    text-align: center;
+}
+
+form{
+    height: 270px auto;
+    width: 400px;
+    padding: 50px;
+    border: 5px groove rgb(150, 150, 150);
+    border-radius: 20px;
+    margin: 0 auto;
+    display: center;
+    text-align: center;
+    box-shadow:2px 2px 20px rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.623);
+}
+
+.flex-container label{
+    color:aliceblue;
+    font-size: 19px;
+    text-align: center;
+    display: center;
+}
+
+.flex-container input{
+    width: 300px;
+    padding: 5px;
+    font-size: 20px;
+    color: black;
+    margin: 10px auto;
+    display:flex;
+}
+.flex-container textarea{
+    width: 300px;
+    padding: 5px;
+    font-size: 20px;
+    color: black;
+    height: 150px;
+    margin: 20px auto;
+    display: flex;
+}
+
+input.invalid{
+    border: 2px dotted red;
+}
+
+.error-hint{
+    color: red;
+    font-size: 15px;
+    display: block;
+    margin-left: 93px;
+}
+
+button{
+    padding: 10px;
+    font-size:15px;
+    color:rgb(13, 13, 14);
+    border: double white;
+    background-image: linear-gradient(360deg, rgb(0, 0, 0), rgba(255, 255, 255, 0.224));
+    border-radius: 20%;
+}
+
+button:hover{
+    border-color: rgb(11, 156, 240);
+    color: rgb(11, 156, 240);
+}
+
+.hidden{
+    display: none;
+}
+
+
+.success{
+   color: hsl(0, 0%, 30%); 
+   font-size: 50px;
+   font-weight: bold;
+   font-family: 'Courier New', Courier, monospace;
+   letter-spacing: 7px;
+   text-transform: uppercase;
+   text-align: center;
+   background: linear-gradient(
+    to right,
+    hsl(0,0%,30%) 0,
+    hsl(0,0%,100%) 10%,
+    hsl(0,0%,30%) 20%
+   );
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: shine 15s infinite linear;
+}
+
+footer{
+    background: rgba(22, 22, 22, 0.425);
+    margin-top: -150px;
+    color: aliceblue;
+    font-family: "Shadows Into Light", cursive;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+@keyframes shine {
+    0% {
+        background-position: -600px;
+    }
+    60% {
+        background-position: 1300px;
+    }
+    100% {
+        background-position: 1300px;
+    }
+};
+
+
+@media (max-width: 600px) {
+    nav ul li{
+        display: inline-block;
+        margin: 5px;
+        word-spacing: 1px;
+    }
+    body{
+        word-spacing: 2px;
+    }
+}
