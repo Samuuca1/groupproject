@@ -8,4 +8,6 @@ Implementation of a simple user form which will be later on added mode detail an
 
 We are also going to organize the github repository which will be Salomon part on todays submission.
 
+No problems were really found, I had a little confusion to add someone to my project but I got it figured it out. 
+
 Thank you, Samuel.
