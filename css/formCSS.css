@@ -118,6 +118,11 @@ button:hover{
    animation: shine 15s infinite linear;
 }
 
+#result{
+    color: aliceblue;
+    font-size: 300px;
+}
+
 footer{
     background: rgba(22, 22, 22, 0.425);
     margin-top: -150px;

@@ -8,12 +8,12 @@ const inputGoal = document.querySelector('textarea[name="inputGoal"]');
 
 
 const isValidEmail = (email) => {
-  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
 };
 const isValidHeight = (height) => {
-  const re = /^(3-7)'(?:\s*(?:1[01]|0-9)(''|"))?$/;
-  return re.test(String(height).toLowerCase());
+    const re = /^([3-8])'([0-9]|1[0-1])("?|''?)$/;
+    return re.test(String(height).trim());
 };
 
 
@@ -49,7 +49,7 @@ const validateInput = () => {
         isThisValid = false;
         refuseInput(inputHeight);
     }
-     if (!inputWeight.value) {
+    if (!inputWeight.value) {
         isThisValid = false;
         refuseInput(inputWeight);
     }
@@ -57,8 +57,8 @@ const validateInput = () => {
         isThisValid = false;
         refuseInput(inputGoal);
     }
-  
-  
+
+
 };
 
 form.addEventListener("submit", (e) => {
@@ -89,3 +89,37 @@ inputWeight.addEventListener("input", () => {
 inputGoal.addEventListener("textarea", () => {
     validateInput();
 });
+
+function calculate() {
+    let height = parseFloat(document.getElementById("height").value);
+    let weight = parseFloat(document.getElementById("weight").value);
+
+    if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+        document.getElementById("result").innerText = "Please enter valid positive numbers.";
+        return;
+    }
+
+    // Calculating BMI
+    let heightMeters = height / 100;
+    let bmi = weight / (heightMeters * heightMeters);
+
+    let message = "";
+
+    // Different Cases of body types
+    switch (true) {
+        case (bmi < 18.5):
+            message = `Your BMI is ${bmi.toFixed(1)} - Underweight.`;
+            break;
+        case (bmi >= 18.5 && bmi < 25):
+            message = `Your BMI is ${bmi.toFixed(1)} - Normal weight.`;
+            break;
+        case (bmi >= 25 && bmi < 30):
+            message = `Your BMI is ${bmi.toFixed(1)} - Overweight.`;
+            break;
+        default:
+            message = `Your BMI is ${bmi.toFixed(1)} - Obese.`;
+    }
+
+    document.getElementById("result").innerText = message;
+}
+
