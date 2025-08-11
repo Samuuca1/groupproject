@@ -21,21 +21,16 @@
         </div>
         <div class="flex-container">
             <label>Height</label>
-            <input name="inputHeight" placeholder="Height in inches" />
+            <input id="inputHeight" placeholder="5'10&quot;" />
             <div class="error-hint hidden"> You must insert your height. </div>
         </div>
         <div class="flex-container">
             <label>Weight</label>
-            <input name="inputWeight" placeholder="Weight in lbs" />
+            <input id="inputWeight" placeholder="Weight in lbs" />
             <div class="error-hint hidden"> You must insert your weight. </div>
         </div>
-        <div class="flex-container">
-            <label>Let us know:</label>
-            <textarea name="inputGoal" placeholder="Please tell me what is your ultimate goal with fitness."></textarea>
-            <div class="error-hint hidden"> I need to know what is your goal </div>
-        </div>
-        <button>Submit</button>
-        <button onclick="window.location.href='index.html'">Home</button>
+        <button type="button" onclick="submitForm()">Submit</button>
+        <button type="button" onclick="window.location.href='index.html'">Home</button>
     </form>
     <p id="result"></p>
         
