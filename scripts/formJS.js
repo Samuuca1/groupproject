@@ -95,15 +95,13 @@ function calculateBMI() {
     let feet = parseInt(match[1]);
     let inches = parseInt(match[2]);
 
-    // Convert total inches to meters
+    // Convert total feet and inches to inches
     let totalInches = feet * 12 + inches;
-    let heightMeters = totalInches * 0.0254; // 1 inch = 0.0254 m
-
-    // Convert weight lbs to kg
-    let weightKg = weight * 0.453592;
+   
 
     // Calculate BMI
-    let bmi = weightKg / (heightMeters * heightMeters);
+    let bmi1 = weight / (totalInches * totalInches);
+    let bmi = bmi1 * 703;
     bmi = bmi.toFixed(1);
 
     let message = "";
@@ -111,20 +109,21 @@ function calculateBMI() {
     // Categorize using switch(true)
     switch (true) {
         case (bmi < 18.5):
-            message = `Your BMI is ${bmi} - Underweight.`;
+            message = `Your BMI is ${bmi} - Underweight. Click to start your change: <a href="underweight.html"> Here </a>`;
             break;
         case (bmi >= 18.5 && bmi < 25):
-            message = `Your BMI is ${bmi} - Normal weight.`;
+            message = `Your BMI is ${bmi} - Normal weight. Click to start your change: <a href="normal.html"> Here </a>`;
             break;
-        case (bmi >= 25 && bmi < 30):
-            message = `Your BMI is ${bmi} - Overweight.`;
+        case (bmi >= 25 && bmi < 40):
+            message = `Your BMI is ${bmi} - Overweight. Click to start your change: <a href="overweight.html"> Here </a>`;
             break;
         default:
-            message = `Your BMI is ${bmi} - Obese.`;
+            message = `Your BMI is ${bmi} - Obese. 
+            Click to start your change: <a href="obese.html"> Here </a>`;
     }
 
     // Display result on screen
-    document.getElementById("result").innerText = message;
+    document.getElementById("result").innerHTML = message;
 }
 
 function submitForm() {
