@@ -4,7 +4,6 @@ const nameInput = document.querySelector('input[name="inputFName"]');
 const inputEmail = document.querySelector('input[name="inputEmail"]');
 const inputHeight = document.querySelector('input[name="inputHeight"]');
 const inputWeight = document.querySelector('input[name="inputWeight"]');
-const inputGoal = document.querySelector('textarea[name="inputGoal"]');
 
 
 const isValidEmail = (email) => {
@@ -53,10 +52,6 @@ const validateInput = () => {
         isThisValid = false;
         refuseInput(inputWeight);
     }
-    if (!inputGoal.value) {
-        isThisValid = false;
-        refuseInput(inputGoal);
-    }
 
 
 };
@@ -86,9 +81,6 @@ inputWeight.addEventListener("input", () => {
     validateInput();
 });
 
-inputGoal.addEventListener("textarea", () => {
-    validateInput();
-});
 
 function calculate() {
     let height = parseFloat(document.getElementById("height").value);
@@ -100,26 +92,55 @@ function calculate() {
     }
 
     // Calculating BMI
-    let heightMeters = height / 100;
-    let bmi = weight / (heightMeters * heightMeters);
+    function calculateBMI() {
+        let heightInput = document.getElementById("height").value.trim();
+        let weight = parseFloat(document.getElementById("weight").value);
+        let resultElement = document.getElementById("result");
 
-    let message = "";
+        // Validate inputs
+        if (!isValidHeight(heightInput)) {
+            resultElement.innerText = "Please enter height in format like 5'10\".";
+            return;
+        }
+        if (isNaN(weight) || weight <= 0) {
+            resultElement.innerText = "Please enter a valid positive weight.";
+            return;
+        }
 
-    // Different Cases of body types
-    switch (true) {
-        case (bmi < 18.5):
-            message = `Your BMI is ${bmi.toFixed(1)} - Underweight.`;
-            break;
-        case (bmi >= 18.5 && bmi < 25):
-            message = `Your BMI is ${bmi.toFixed(1)} - Normal weight.`;
-            break;
-        case (bmi >= 25 && bmi < 30):
-            message = `Your BMI is ${bmi.toFixed(1)} - Overweight.`;
-            break;
-        default:
-            message = `Your BMI is ${bmi.toFixed(1)} - Obese.`;
+        // Extract feet and inches
+        let match = heightInput.match(/^([3-8])'([0-9]|1[0-1])/);
+        let feet = parseInt(match[1]);
+        let inches = parseInt(match[2]);
+
+        // Convert total inches to meters
+        let totalInches = feet * 12 + inches;
+        let heightMeters = totalInches * 0.0254; // 1 inch = 0.0254 m
+
+        // Convert weight lbs to kg
+        let weightKg = weight * 0.453592;
+
+        // Calculate BMI
+        let bmi = weightKg / (heightMeters * heightMeters);
+        bmi = bmi.toFixed(1);
+
+        let message = "";
+
+        // Categorize using switch(true)
+        switch (true) {
+            case (bmi < 18.5):
+                message = `Your BMI is ${bmi} - Underweight.`;
+                break;
+            case (bmi >= 18.5 && bmi < 25):
+                message = `Your BMI is ${bmi} - Normal weight.`;
+                break;
+            case (bmi >= 25 && bmi < 30):
+                message = `Your BMI is ${bmi} - Overweight.`;
+                break;
+            default:
+                message = `Your BMI is ${bmi} - Obese.`;
+        }
+
+        // Display result on screen
+        resultElement.innerText = message;
     }
-
-    document.getElementById("result").innerText = message;
 }
-
