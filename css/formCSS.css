@@ -26,12 +26,15 @@ h1{
 }
 
 #result{
-    color: rgb(235, 10, 10);       /* Make text contrast with background */
-    font-size: 1.2em;   /* Larger text */
-    font-weight: bold;  /* Make it stand out */
-    background: rgba(0,0,0,0.5); /* Optional: semi-transparent background for contrast */
+    color: rgb(240, 240, 240);   
+    font-size: 18px;   
+    font-weight: bold;  
+    background: rgba(0,0,0,0.5); 
     padding: 10px;
-    display: flex;
+    text-align: center;
+    border-radius: 40px;
+    margin: 40px 550px 0px 550px;
+    box-shadow: 3px 3px 10px rgba(243, 242, 242, 0.418);
 }
 
 form{
