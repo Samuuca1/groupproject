@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <script src="scripts/formJS.js" defer></script>
     <link rel="stylesheet" href="css/formCSS.css">
 </head>
+
 <body>
-     <form>
+    <form>
         <div class="flex-container">
             <label>Full Name</label>
             <input name="inputFName" placeholder="First and Last name" />
@@ -20,8 +22,9 @@
             <div class="error-hint hidden"> You must insert email. </div>
         </div>
         <div class="flex-container">
-            <label>Height</label>
-            <input id="inputHeight" placeholder="5'10&quot;" />
+            <label>Height (Feet & Inches)</label>
+            <input id="inputFeet" placeholder="Feet" type="number" min="3" max="8" />
+            <input id="inputInches" placeholder="Inches" type="number" min="0" max="11" />
             <div class="error-hint hidden"> You must insert your height. </div>
         </div>
         <div class="flex-container">
@@ -33,6 +36,7 @@
         <button type="button" onclick="window.location.href='index.html'">Home</button>
     </form>
     <p id="result"></p>
-        
+
 </body>
+
 </html>
