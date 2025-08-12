@@ -62,3 +62,23 @@ th {
     font-size: 14px;
     max-width: 200px;
 }
+
+#homebtn{
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0,0,0,0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #333;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(4px);
+  
+}
+
+#homebtn:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(0,0,0,0.1));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
