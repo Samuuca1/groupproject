@@ -11,8 +11,6 @@ body{
    background-position: center;
    background-attachment:fixed;
    background-size: cover;
-
-
 }
 
 h1{
@@ -130,6 +128,19 @@ footer{
     bottom: 0;
 }
 
+#videoPopper {
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 999;
+}
+
+#videoBtn{
+    
+}
 
 @media (max-width: 600px) {
     nav ul li{

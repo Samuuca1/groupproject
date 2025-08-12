@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Group Project</title>
-    <script src="scripts/indexJS.js" defer></script>
+    <script src="scripts/index.js" defer></script>
     <link rel="stylesheet" href="css/indexCSS.css">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
 </head>
 
 <body>
     <h1>FIT X</h1>
     <p id="h1p">Stay FIT with us</p>
-    
+
     <header>
         <nav>
             <ul>
@@ -23,10 +25,17 @@
     </header>
 
 
+<!--Hidden motivational video-->
+    <button id="videoBtn">MOTIVATE YOURSELF</button>
+
+
+    <div id="videoPopper" role="tooltip"></div>
+    
     <footer>
         <p> &copy; Copyright 2025 by Samuel. All Rights Reserved.</p>
     </footer>
 
+    
 
 </body>
 
