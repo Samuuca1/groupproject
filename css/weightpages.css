@@ -35,23 +35,29 @@ h2 {
 table {
     width: 100%;
     max-width: 600px;
-    border-collapse: collapse;
+    
     margin: 20px auto;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(18, 18, 18, 0.429);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: white  
 }
 
 th,
 td {
     padding: 12px;
-    border: 1px solid #ddd;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0,0,0,0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #eeeeee;
     text-align: center;
+    
 }
 
 th {
-    background-color: #007bff;
+    background-color: #00275295;
     color: white;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 .tooltip {
@@ -61,6 +67,7 @@ th {
     border-radius: 4px;
     font-size: 14px;
     max-width: 200px;
+    border-radius: 3px;
 }
 
 #homebtn{
