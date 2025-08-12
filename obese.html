@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obese Bodyweight</title>
+    <title>Normal Bodyweight</title>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="scripts/normalJS.js" defer></script>
+    <link rel="stylesheet" href="css/weightpages.css">
 </head>
+
 <body>
-    
+
+    <h2>Diet Menu</h2>
+    <table>
+        <thead>
+            <tr>
+                <th id="diet-header">Meal</th>
+                <th>Calories</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Breakfast — Egg and avocado toast</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <td>Lunch — Salad with grilled chicken</td>
+                <td>180</td>
+            </tr>
+            <tr>
+                <td>Dinner — Salmon with veggies</td>
+                <td>300</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Workout Plan</h2>
+    <table>
+        <thead>
+            <tr>
+                <th id="workout-header">Exercise</th>
+                <th>Reps/Sets</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Walking</td>
+                <td>15 minutes</td>
+            </tr>
+            <tr>
+                <td>Cycling</td>
+                <td>20minutes</td>
+            </tr>
+            <tr>
+                <td>Swimming</td>
+                <td>3 x 10minutes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Motivational Quote</h2>
+    <table>
+        <thead>
+            <tr>
+                <th id="quote-header">Quote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>"Health is not about the weight you lose, but about the life you gain"</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div id="tooltip-diet" class="tooltip" role="tooltip">Healthy meals for a balanced diet</div>
+    <div id="tooltip-workout" class="tooltip" role="tooltip">Daily exercise recommendations</div>
+    <div id="tooltip-quote" class="tooltip" role="tooltip">Words to keep you inspired</div>
+
+    <button id="homebtn" type="button" onclick="window.location.href='index.html'">Home</button>
 </body>
 </html>
