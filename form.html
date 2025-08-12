@@ -7,9 +7,11 @@
     <title>FIT FORM</title>
     <script src="scripts/formJS.js" defer></script>
     <link rel="stylesheet" href="css/formCSS.css">
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
 </head>
 
 <body>
+    <h1 id="bmi-header"> BMI Calculator </h1>
     <form>
         <div class="flex-container">
             <label>Full Name</label>
@@ -36,7 +38,10 @@
         <button type="button" onclick="window.location.href='index.html'">Home</button>
     </form>
     <p id="result"></p>
+    
+    <div id="tooltip-bmi" class="tooltip" role="tooltip">The body mass index or BMI is a ratio of mass to height. Pounds per square inch of height. Numeric BMI values correspond to weight categories including underweight, normal, overweight and obese.
 
+BMI is used as an indicator of the relative healthiness of a person. The Centers for Disease Control (CDC) and the World Health Organization (WHO) recognize that people who are overweight or underweight are at higher risk for certain health conditions</div>
 </body>
 
 </html>

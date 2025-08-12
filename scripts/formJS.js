@@ -6,6 +6,9 @@ const inputFeet = document.getElementById("inputFeet");
 const inputInches = document.getElementById("inputInches");
 const inputWeight = document.querySelector("#inputWeight");
 
+const bmiHeader = document.querySelector('#bmi-header');
+
+const tooltipBmi = document.querySelector('#tooltip-bmi');
 
 const isValidEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -140,3 +143,32 @@ function submitForm() {
         calculateBMI();
     }
 }
+
+function setupTooltip(trigger, tooltip) {
+    tooltip.style.display = 'none';
+    let popperInstance = null;
+
+    function show() {
+        tooltip.style.display = 'block';
+        popperInstance = Popper.createPopper(trigger, tooltip, {
+            placement: 'top',
+            modifiers: [
+                { name: 'offset', options: { offset: [0, 8] } }
+            ]
+        });
+    }
+
+    function hide() {
+        tooltip.style.display = 'none';
+        if (popperInstance) {
+            popperInstance.destroy();
+            popperInstance = null;
+        }
+    }
+
+    trigger.addEventListener('mouseenter', show);
+    trigger.addEventListener('mouseleave', hide);
+}
+
+// Apply tooltips
+setupTooltip(bmiHeader, tooltipBmi);
