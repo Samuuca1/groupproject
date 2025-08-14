@@ -102,9 +102,9 @@ th {
     transition: transform 0.5s ease;
 }
 
-/* Each individual slide */
+
 .slide {
-    flex: 0 0 100%; /* each slide takes full viewport width */
+    flex: 0 0 100%; 
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ th {
     justify-content: center;
 }
 
-/* Navigation buttons */
+
 .nav {
     position: fixed;
     top: 50%;
@@ -120,8 +120,8 @@ th {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 1000; /* ensures it's always on top */
-    pointer-events: auto; /* makes sure it's clickable */
+    z-index: 1000; 
+    pointer-events: auto; 
 }
 
 .nav button {
