@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normal Bodyweight</title>
+    <title>Overweight Bodyweight</title>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="scripts/normalJS.js" defer></script>
     <link rel="stylesheet" href="css/weightpages.css">
 </head>
 
 <body>
+    <div class="nav">
+        <button id="prev">&lt; Prev</button>
+        <button id="next">Next &gt;</button>
+    </div>
 
-    <h2>Diet Menu</h2>
-    <table>
-        <thead>
-            <tr>
-                <th id="diet-header">Meal</th>
-                <th>Calories</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Breakfast - Scrambled egg with spinach and tomato</td>
-                <td>250</td>
-            </tr>
-            <tr>
-                <td>Lunch - Vegetable soup with two oatcakes</td>
-                <td>150</td>
-            </tr>
-            <tr>
-                <td>Dinner - Fish tacos with slaw</td>
-                <td>200</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="slider-container">
+        <div class="slider" id="slider">
+            <div class="slide">
+                <h2>Diet Menu</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="diet-header">Meal</th>
+                            <th>Calories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Breakfast - Scrambled egg with spinach and tomato</td>
+                            <td>250</td>
+                        </tr>
+                        <tr>
+                            <td>Lunch - Vegetable soup with two oatcakes</td>
+                            <td>150</td>
+                        </tr>
+                        <tr>
+                            <td>Dinner - Fish tacos with slaw</td>
+                            <td>200</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <h2>Workout Plan</h2>
-    <table>
-        <thead>
-            <tr>
-                <th id="workout-header">Exercise</th>
-                <th>Reps/Sets</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Running</td>
-                <td>30minutes</td>
-            </tr>
-            <tr>
-                <td>Burpee</td>
-                <td>3 × 15</td>
-            </tr>
-            <tr>
-                <td>Plank</td>
-                <td>3 × 45s</td>
-            </tr>
-        </tbody>
-    </table>
+                <h2>Workout Plan</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="workout-header">Exercise</th>
+                            <th>Reps/Sets</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Running</td>
+                            <td>30minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Burpee</td>
+                            <td>3 × 15</td>
+                        </tr>
+                        <tr>
+                            <td>Plank</td>
+                            <td>3 × 45s</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <h2>Motivational Quote</h2>
-    <table>
-        <thead>
-            <tr>
-                <th id="quote-header">Quote</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>"The only bad workout is the one that didn't happen."</td>
-            </tr>
-        </tbody>
-    </table>
+                <h2>Motivational Quote</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="quote-header">Quote</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"The only bad workout is the one that didn't happen."</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="slide">
+                <h2>Video Slide 1</h2>
+                <video controls width="400">
+                    <source src="sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+            <div class="slide">
+                <h2>Video Slide 2</h2>
+                <video controls width="400">
+                    <source src="sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
 
 
     <div id="tooltip-diet" class="tooltip" role="tooltip">Healthy meals for a balanced diet</div>
@@ -80,4 +107,5 @@
 
     <button id="homebtn" type="button" onclick="window.location.href='index.html'">Home</button>
 </body>
+
 </html>
