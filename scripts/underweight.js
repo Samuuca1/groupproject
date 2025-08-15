@@ -6,6 +6,27 @@ const tooltipDiet = document.querySelector('#tooltip-diet');
 const tooltipWorkout = document.querySelector('#tooltip-workout');
 const tooltipQuote = document.querySelector('#tooltip-quote');
 
+//Sliding Page
+let currentSlide = 0;
+const slider = document.getElementById('slider');
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+document.getElementById('next').addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlide();
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    updateSlide();
+});
+
+function updateSlide() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+}
+//Sliding Page done
+
 function setupTooltip(trigger, tooltip) {
     tooltip.style.display = 'none';
     let popperInstance = null;
