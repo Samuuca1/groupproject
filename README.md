@@ -1,7 +1,3 @@
-<img width="1906" height="1030" alt="Screenshot 2025-08-17 154755" src="https://github.com/user-attachments/assets/1c042dda-86d0-4ed3-ad89-93fdafb1b661" />
-<img width="1917" height="1028" alt="Screenshot 2025-08-17 154739" src="https://github.com/user-attachments/assets/a9624407-5947-490e-b498-4f4b7ea9cd31" />
-<img width="1918" height="1032" alt="Screenshot 2025-08-17 154711" src="https://github.com/user-attachments/assets/32c0a7a7-21a2-4b9d-80c3-8716ce54e758" />
-
 
 AS of today, unfortunately all the responsabilities and roles of this project will be direct to me ( Samuel Chaves ) Since none of my groupmates decided to reach out.
 
@@ -48,4 +44,13 @@ YOUTUBE LINK -
 
 Links to your Issue Boards, feature branches, and other resources ----- 
 
-[ISSUES](https://github.com/Samuuca1/groupproject/issues)
+[ISSUES](https://github.com/Samuuca1/groupproject/issues)  -- Issues Page
+[PROJECT BOARD](https://github.com/users/Samuuca1/projects/2) -- Projec Board Page 
+[POPPER.JS TUTORIAL](https://popper.js.org/docs/v2/tutorial/) -- Popper Tutorial Page
+[CHARTS.JS](https://www.chartjs.org/) -- Charts Oficial Page
+
+
+
+<img width="1906" height="1030" alt="Screenshot 2025-08-17 154755" src="https://github.com/user-attachments/assets/1c042dda-86d0-4ed3-ad89-93fdafb1b661" />
+<img width="1917" height="1028" alt="Screenshot 2025-08-17 154739" src="https://github.com/user-attachments/assets/a9624407-5947-490e-b498-4f4b7ea9cd31" />
+<img width="1918" height="1032" alt="Screenshot 2025-08-17 154711" src="https://github.com/user-attachments/assets/32c0a7a7-21a2-4b9d-80c3-8716ce54e758" />
