@@ -105,13 +105,43 @@ footer{
   box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
+@media (max-width: 900px) {
+  h1 {
+    font-size: 8vw;
+  }
+  #h1p {
+    font-size: 1.2rem;
+    margin-top: -4vw;
+  }
+  nav ul li {
+    margin: 0 10px;
+  }
+}
+
+
 @media (max-width: 600px) {
-    nav ul li{
-        display: inline-block;
-        margin: 5px;
-        word-spacing: 1px;
-    }
-    body{
-        word-spacing: 2px;
-    }
+  h1 {
+    font-size: 12vw; 
+  }
+  #h1p {
+    font-size: 1rem;
+    margin-top: -3vw;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px;
+    margin: 5px auto;
+    max-width: 200px;
+  }
+
+  main {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
 }

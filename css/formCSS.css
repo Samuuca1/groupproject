@@ -58,7 +58,8 @@ form{
 }
 
 .flex-container input{
-    width: 300px;
+    width: 100%;             
+    max-width: 300px;
     padding: 5px;
     font-size: 20px;
     color: black;
@@ -114,26 +115,30 @@ footer{
     max-width: 200px;
 }
 
-@keyframes shine {
-    0% {
-        background-position: -600px;
+
+@media (max-width: 900px) {
+    h1 {
+        font-size: 2rem;
     }
-    60% {
-        background-position: 1300px;
+    #result {
+        font-size: 0.9rem;
+        margin: 20px auto;
     }
-    100% {
-        background-position: 1300px;
-    }
-};
+}
 
 
 @media (max-width: 600px) {
-    nav ul li{
-        display: inline-block;
-        margin: 5px;
-        word-spacing: 1px;
+    h1 {
+        font-size: 1.8rem;
     }
-    body{
-        word-spacing: 2px;
+    form {
+        padding: 15px;
+    }
+    .flex-container input {
+        max-width: 100%; 
+    }
+    button {
+        width: 100%; 
+        border-radius: 10px;
     }
 }

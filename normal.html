@@ -8,6 +8,7 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="scripts/normalJS.js" defer></script>
     <link rel="stylesheet" href="css/weightpages.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -85,19 +86,30 @@
             </div>
 
             <div class="slide">
-                <h2>Video Slide 1</h2>
-                <video controls width="400">
-                    <source src="sample.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <h2>"How to", videos</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xqvCmoLULNY?si=JKn6w83g4u0tox9m"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+                <br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pvIjsG5Svck?si=6JePXxCki6OGpfOg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
 
             </div>
-               <div class="slide">
-                <h2>Video Slide 2</h2>
-                <video controls width="400">
-                    <source src="sample.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="slide">
+                <h2>Weight Progress Tracker</h2>
+
+                <div class="input-box">
+                    <label for="weight">Enter Weight (kg): </label>
+                    <input type="number" id="weight" placeholder="e.g. 75">
+                    <button onclick="addWeight()">Add</button>
+                </div>
+
+                <canvas id="weightChart"></canvas>
             </div>
         </div>
     </div>
