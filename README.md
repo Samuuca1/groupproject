@@ -10,12 +10,18 @@ We are also going to organize the github repository which will be Salomon part o
 
 No problems were really found, I had a little confusion to add someone to my project but I got it figured it out. 
 
-Thank you, Samuel.
+
+
+
 ==================================================================================================================================================================
+
 
 Update- Aug 09, as of today I have no longer any group members left. Solomon has ghosted me and Monique dropped off the course.
 
+
 ==================================================================================================================================================================
+
+
 Update- Aug 17. 
 
 Last day and update on the group project for now. 
