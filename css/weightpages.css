@@ -39,17 +39,17 @@ table {
     background: rgba(18, 18, 18, 0.429);
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    color: white  
+    color: white
 }
 
 th,
 td {
     padding: 12px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0,0,0,0.05));
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #eeeeee;
     text-align: center;
-    
+
 }
 
 th {
@@ -69,24 +69,24 @@ th {
     border-radius: 3px;
 }
 
-#homebtn{
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0,0,0,0.05));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #333;
-  padding: 12px 20px;
-  font-size: 16px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  backdrop-filter: blur(4px);
-  
+#homebtn {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #333;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(4px);
+
 }
 
 #homebtn:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(0,0,0,0.1));
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.1));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Hide extra slides */
@@ -104,7 +104,7 @@ th {
 
 
 .slide {
-    flex: 0 0 100%; 
+    flex: 0 0 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -120,15 +120,31 @@ th {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    z-index: 1000; 
-    pointer-events: auto; 
+    z-index: 1000;
+    pointer-events: auto;
 }
 
 .nav button {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     font-size: 18px;
+}
+
+.input-box {
+    margin: 15px;
+    background-color: rgba(104, 104, 104, 0.308);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+canvas {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: block;
+    background-color: rgba(42, 42, 42, 0.498);
+    border-radius: 3px;
+    width: 900px;
 }
