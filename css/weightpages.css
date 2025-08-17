@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Monsieur+La+Doulaise&family=WindSong:wght@400;500&display=swap&family=Shadows+Into+Light&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 
 body {
@@ -30,6 +30,9 @@ h1 {
 h2 {
     text-align: center;
     margin-top: 30px;
+    color: aliceblue;
+    font-family: "Outfit";
+    text-shadow: 1px 2px rgba(245, 245, 245, 0.205);
 }
 
 table {
@@ -96,7 +99,7 @@ th {
     overflow: hidden;
 }
 
-/* The row of slides */
+
 .slider {
     display: flex;
     transition: transform 0.5s ease;
@@ -148,3 +151,28 @@ canvas {
     border-radius: 3px;
     width: 900px;
 }
+
+
+/* Making it interactive to other size screens */
+
+img, iframe, canvas {
+  width: 35%;
+  height: 50%;
+  display: flex;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+
