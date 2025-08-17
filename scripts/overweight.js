@@ -59,3 +59,48 @@ function setupTooltip(trigger, tooltip) {
 setupTooltip(dietHeader, tooltipDiet);
 setupTooltip(workoutHeader, tooltipWorkout);
 setupTooltip(quoteHeader, tooltipQuote);
+
+//Weight Chart
+
+const ctx = document.getElementById('weightChart').getContext('2d');
+const weightChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Weight (kg)',
+            data: [],
+            borderColor: 'blue',
+            backgroundColor: 'lightblue',
+            fill: true,
+            tension: 0.3
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { position: 'top' }
+        },
+        scales: {
+            y: { beginAtZero: false }
+        }
+    }
+});
+
+// Add weight data
+function addWeight() {
+    const weightInput = document.getElementById("weight");
+    const weight = weightInput.value;
+    if (weight) {
+        // Add current date as label
+        const today = new Date().toLocaleDateString();
+        weightChart.data.labels.push(today);
+        weightChart.data.datasets[0].data.push(weight);
+
+
+        weightChart.update();
+
+
+        weightInput.value = "";
+    }
+}
