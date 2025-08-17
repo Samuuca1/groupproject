@@ -47,3 +47,5 @@ YOUTUBE LINK -
 
 
 Links to your Issue Boards, feature branches, and other resources ----- 
+
+[ISSUES](https://github.com/Samuuca1/groupproject/issues)
